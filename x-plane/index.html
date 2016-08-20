@@ -1,1 +1,49 @@
-<html>Hello World</html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>X Plane Flight Plan Generator</title>
+    <link href="../shared/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../shared/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="../shared/css/theme.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="top_nav"></nav>
+    <div class="container theme-showcase" role="main">
+      <input type="text" id="airline_code">
+      <input type="time" id="departure_time">
+      <input type="text" id="aircraft">
+      <input type="text" id="call_sign">
+      <!-- Checkboxes for d0 - d6 for days -->
+      <input type="text" id="departure_airport">
+      <input type="text" id="arrival_airport">
+      <!-- Radio button for fly to completion - 1 or 0 -->
+      <input type="number" id="landing_light_altitude">
+      <input type="number" id="cruise_altitude">
+      <input type="number" id="cruise_speed">
+      <input type="number" id="climb_speed">
+
+      <!-- WAYPOINTS -->
+      <input type="text" id="wp_callsign">
+      <input type="number" id="wp_altitude">
+      <!-- Radio button - ASL or AGL -->
+      <input type="number" id="wp_max_bank_angle">
+      <!-- CREATE DRAG AND DROP FOR WPs -->
+      <!-- END WAYPOINTS -->
+
+      <h2 id="file_name"></h2>
+      <textarea id="flightplan"></textarea>
+
+    </div> <!-- /container -->
+    <script src="data/earth_nav.js"></script>
+    <script src="data/earth_fix.js"></script>
+    <script src="../shared/js/jquery.js"></script>
+    <script src="../shared/js/bootstrap.min.js"></script>
+    <script src="../shared/js/templating.js"></script>
+  </body>
+</html>
